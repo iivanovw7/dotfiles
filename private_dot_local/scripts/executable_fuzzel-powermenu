@@ -33,7 +33,7 @@ chosen=$(echo -e "$content" | fuzzel --dmenu \
 case "$chosen" in
 "$lock") hyprlock ;;
 "$suspend") systemctl suspend ;;
-"$logout") hyprctl dispatch exit ;;
+"$logout") loginctl terminate-session "$XDG_SESSION_ID" ;;
 "$reboot") systemctl reboot ;;
-"$shutdown") hyprctl dispatch exit && systemctl poweroff ;;
+"$shutdown") systemctl poweroff ;;
 esac

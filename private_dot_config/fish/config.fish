@@ -87,7 +87,7 @@ set -gx PATH ~/.local/bin $PATH
 set -gx PATH "$PATH":"$HOME/.local/scripts/"
 
 # NodeJS
-set -gx PATH node_modules/.bin $PATH
+set -gx PATH $HOME/.npm-global/bin node_modules/.bin $PATH
 
 # Go
 set -g GOPATH $HOME/go
